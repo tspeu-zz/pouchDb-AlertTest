@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+
+		<button *ngFor = "let i of pages" (click)="gotoPage(i.id)" full round item-right>
+		 {{i.title}}<ion-icon name={{i.icon}} danger></ion-icon>
+		</button>
+
+		<button fab fab-left  (click)="gotoPage(1)" favorite>Db</button>
+		<button fab fab-right (click)="gotoPage(2)" danger>Alert</button>
+
+</ion-list>
+
+</ion-content>
